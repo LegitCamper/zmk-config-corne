@@ -40,8 +40,8 @@
 
         Upper_Layer {
             bindings = <
-       &kp ESC      &trans       &kp C_VOL_UP      &trans     &trans            &trans           &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3           &trans
-      &kp CAPS  &kp C_PREV  &kp C_VOLUME_DOWN  &kp C_NEXT     &trans            &trans               &kp N6        &kp N7        &kp N8        &kp N9        &kp N0           &trans
+       &kp ESC      &trans       &kp C_VOL_UP      &trans     &trans            &trans           &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3       &sys_reset
+      &kp CAPS  &kp C_PREV  &kp C_VOLUME_DOWN  &kp C_NEXT     &trans            &trans               &kp N6        &kp N7        &kp N8        &kp N9        &kp N0      &bootloader
 &kp LEFT_SHIFT      &trans         &kp C_MUTE      &trans  &kp MINUS  &kp LEFT_BRACKET    &kp RIGHT_BRACKET      &kp PLUS     &kp TILDE     &kp GRAVE        &trans  &kp RIGHT_SHIFT
                                                    &trans     &trans            &trans               &trans        &tog 3       &kp DEL
             >;
@@ -57,10 +57,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-  &kp TAB  &trans  &kp F10  &kp F7  &kp F8       &kp F9    &trans  &trans  &trans  &trans  &trans  &trans
- &kp CAPS  &trans  &kp F11  &kp F4  &kp F5       &kp F6    &trans  &trans  &trans  &trans  &trans  &trans
-&kp LSHFT  &trans  &kp F12  &kp F1  &kp F2       &kp F3    &trans  &trans  &trans  &trans  &trans  &trans
-                            &trans  &trans  &bootloader    &trans  &trans  &trans
+  &kp TAB  &trans  &kp F10  &kp F7  &kp F8  &kp F9    &trans  &trans  &trans  &trans  &trans  &trans
+ &kp CAPS  &trans  &kp F11  &kp F4  &kp F5  &kp F6    &trans  &trans  &trans  &trans  &trans  &trans
+&kp LSHFT  &trans  &kp F12  &kp F1  &kp F2  &kp F3    &trans  &trans  &trans  &trans  &trans  &trans
+                            &trans  &trans  &trans    &trans  &trans  &trans
             >;
 
             label = "Func";
