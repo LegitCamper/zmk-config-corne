@@ -29,9 +29,9 @@
 
         Lower_Layer {
             bindings = <
-       &kp TAB      &trans       &kp C_VOL_UP      &trans  &trans  &trans    &kp HOME  &kp PAGE_DOWN    &kp PG_UP    &kp END  &trans           &trans
-      &kp CAPS  &kp C_PREV  &kp C_VOLUME_DOWN  &kp C_NEXT  &trans  &trans    &kp LEFT       &kp DOWN       &kp UP  &kp RIGHT  &trans           &trans
-&kp LEFT_SHIFT      &trans         &kp C_MUTE      &trans  &trans  &trans      &trans     &kp K_COPY  &kp K_PASTE     &trans  &trans  &kp RIGHT_SHIFT
+       &kp TAB      &trans       &kp C_VOL_UP      &trans  &trans  &trans    &kp HOME  &kp PAGE_DOWN    &kp PG_UP    &kp END  &trans  &tog 4
+      &kp CAPS  &kp C_PREV  &kp C_VOLUME_DOWN  &kp C_NEXT  &trans  &trans    &kp LEFT       &kp DOWN       &kp UP  &kp RIGHT  &trans  &trans
+&kp LEFT_SHIFT      &trans         &kp C_MUTE      &trans  &trans  &trans      &trans     &kp K_COPY  &kp K_PASTE     &trans  &trans  &tog 3
                                                    &trans  &trans  &trans      &trans         &trans      &kp DEL
             >;
 
@@ -40,9 +40,9 @@
 
         Upper_Layer {
             bindings = <
-       &kp TAB        &trans        &trans        &trans        &trans            &trans           &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3       &sys_reset
-      &kp CAPS  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4      &kp NUMBER_5               &kp N6        &kp N7        &kp N8        &kp N9        &kp N0      &bootloader
-&kp LEFT_SHIFT        &trans        &trans     &kp ENTER     &kp MINUS  &kp LEFT_BRACKET    &kp RIGHT_BRACKET      &kp PLUS     &kp TILDE     &kp GRAVE        &trans  &kp RIGHT_SHIFT
+       &kp TAB        &trans        &trans        &trans        &trans            &trans           &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3   &sys_reset
+      &kp CAPS  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4      &kp NUMBER_5               &kp N6        &kp N7        &kp N8        &kp N9        &kp N0  &bootloader
+&kp LEFT_SHIFT        &trans        &trans     &kp ENTER     &kp MINUS  &kp LEFT_BRACKET    &kp RIGHT_BRACKET      &kp PLUS     &kp TILDE     &kp GRAVE        &trans       &trans
                                                   &trans        &trans            &trans               &trans        &trans       &kp DEL
             >;
 
@@ -57,13 +57,35 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-  &kp TAB  &trans  &kp F10  &kp F7  &kp F8  &kp F9    &kp KP_DIVIDE  &kp KP_NUMBER_7   &kp KP_N8  &kp KP_NUMBER_9  &kp KP_SUBTRACT  &trans
+  &kp TAB  &trans  &kp F10  &kp F7  &kp F8  &kp F9    &kp KP_DIVIDE  &kp KP_NUMBER_7   &kp KP_N8  &kp KP_NUMBER_9  &kp KP_SUBTRACT  &tog 4
  &kp CAPS  &trans  &kp F11  &kp F4  &kp F5  &kp F6         &kp STAR        &kp KP_N4   &kp KP_N5        &kp KP_N6      &kp KP_PLUS  &trans
-&kp LSHFT  &trans  &kp F12  &kp F1  &kp F2  &kp F3           &trans        &kp KP_N1   &kp KP_N2        &kp KP_N3           &trans  &trans
+&kp LSHFT  &trans  &kp F12  &kp F1  &kp F2  &kp F3           &trans        &kp KP_N1   &kp KP_N2        &kp KP_N3           &trans  &tog 3
                             &trans  &trans  &trans           &trans  &kp KP_NUMBER_0  &kp PERIOD
             >;
 
             label = "Func";
+        };
+
+        Gaming_Layer_Base {
+            bindings = <
+         &kp TAB  &kp Q  &kp W         &kp E  &kp R      &kp T    &none  &none  &none  &none  &none  &tog 4
+&kp LEFT_CONTROL  &kp A  &kp S         &kp D  &kp F      &kp G    &none  &none  &none  &none  &none   &none
+  &kp LEFT_SHIFT  &kp Z  &kp X         &kp C  &kp V      &kp B    &none  &none  &none  &none  &none  &tog 3
+                                &kp LEFT_WIN  &mo 5  &kp SPACE    &none  &none  &none
+            >;
+
+            label = "GamingB";
+        };
+
+        Gaming_Layer_Upper {
+            bindings = <
+&kp ESCAPE  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+  &kp CAPS  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+    &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+                            &trans  &trans  &trans    &trans  &trans  &trans
+            >;
+
+            label = "GamingU";
         };
     };
 };
