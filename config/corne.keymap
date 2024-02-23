@@ -73,19 +73,19 @@
 
         Gaming_Layer_Base {
             bindings = <
-&kp TAB           &kp Q  &kp W  &kp E         &kp R  &kp T        &none  &none  &none  &none  &none  &trans
+&kp TAB           &kp Q  &kp W  &kp E         &kp R  &kp T        &none  &none  &none  &none  &none  &tog 2
 &kp LEFT_CONTROL  &kp A  &kp S  &kp D         &kp F  &kp G        &none  &none  &none  &none  &none  &none
-&kp LEFT_SHIFT    &kp Z  &kp X  &kp C         &kp V  &kp B        &none  &none  &none  &none  &none  &trans
+&kp LEFT_SHIFT    &kp Z  &kp X  &kp C         &kp V  &kp B        &none  &none  &none  &none  &none  &tog 5
                                 &kp LEFT_GUI  &mo 5  &kp SPACE    &none  &none  &none
             >;
         };
 
         Upper_Layer {
             bindings = <
-&kp TAB   &trans        &trans        &trans        &trans        &kp EQUAL           &bt BT_CLR         &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &trans
-&kp CAPS  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5        &kp N6             &kp N7        &kp N8        &kp N9        &kp N0        &trans
-&trans    &trans        &trans        &kp ENTER     &kp MINUS     &kp LEFT_BRACKET    &kp RIGHT_BRACKET  &kp PLUS      &kp TILDE     &trans        &kp GRAVE     &trans
-                                      &none         &none         &trans              &trans             &trans        &trans
+&kp TAB   &none         &none         &none         &none         &kp EQUAL           &bt BT_CLR         &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &none
+&kp CAPS  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5        &kp N6             &kp N7        &kp N8        &kp N9        &kp N0        &none
+&none     &none         &none         &kp ENTER     &kp MINUS     &kp LEFT_BRACKET    &kp RIGHT_BRACKET  &kp PLUS      &kp TILDE     &none         &kp GRAVE     &none
+                                      &none         &none         &none               &none              &none         &none
             >;
         };
 
@@ -106,10 +106,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp TAB    &trans  &kp F10  &kp F7  &kp F8  &kp F9    &kp KP_DIVIDE  &kp KP_NUMBER_7  &kp KP_N8   &kp KP_NUMBER_9  &kp KP_SUBTRACT  &tog 4
-&kp CAPS   &trans  &kp F11  &kp F4  &kp F5  &kp F6    &kp STAR       &kp KP_N4        &kp KP_N5   &kp KP_N6        &kp KP_PLUS      &trans
-&kp LSHFT  &trans  &kp F12  &kp F1  &kp F2  &kp F3    &trans         &kp KP_N1        &kp KP_N2   &kp KP_N3        &trans           &tog 5
-                            &trans  &trans  &trans    &trans         &kp KP_NUMBER_0  &kp PERIOD
+&kp TAB    &none  &kp F10  &kp F7  &kp F8  &kp F9    &kp KP_DIVIDE  &kp KP_NUMBER_7  &kp KP_N8   &kp KP_NUMBER_9  &kp KP_SUBTRACT  &tog 4
+&kp CAPS   &none  &kp F11  &kp F4  &kp F5  &kp F6    &kp STAR       &kp KP_N4        &kp KP_N5   &kp KP_N6        &kp KP_PLUS      &none
+&kp LSHFT  &none  &kp F12  &kp F1  &kp F2  &kp F3    &none          &kp KP_N1        &kp KP_N2   &kp KP_N3        &none            &tog 5
+                           &none   &none   &none     &none          &kp KP_NUMBER_0  &kp PERIOD
             >;
         };
     };
