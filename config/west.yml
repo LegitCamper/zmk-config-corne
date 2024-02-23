@@ -2,15 +2,15 @@ manifest:
   remotes:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
-    - name: legitcamper
-      url-base: https://github.com/legitcamper
+    #- name: legitcamper
+    #  url-base: https://github.com/legitcamper
   projects:
     - name: zmk
       remote: zmkfirmware
       revision: main
       import: app/west.yml
-    - name: zmk-autocorrect-module
-      remote: legitcamper
-      revision: main
+    #- name: zmk-autocorrect-module
+    #  remote: legitcamper
+    #  revision: main
   self:
     path: config
