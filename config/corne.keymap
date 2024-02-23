@@ -15,32 +15,48 @@
         gui_left {
             bindings = <&kp LEFT_GUI>;
             key-positions = <16 15>;
-            layers = <0>;
+            layers = <1>;
         };
 
         gui_right {
             bindings = <&kp RIGHT_GUI>;
             key-positions = <19 20>;
-            layers = <0>;
+            layers = <1>;
         };
 
         alt_left {
             bindings = <&kp LEFT_ALT>;
             key-positions = <16 15 14>;
-            layers = <0>;
+            layers = <1>;
         };
 
         alt_right {
             bindings = <&kp RIGHT_ALT>;
             key-positions = <19 20 21>;
-            layers = <0>;
+            layers = <1>;
+        };
+
+        gaming_alt {
+            bindings = <&kp LEFT_ALT>;
+            key-positions = <14 13 15>;
+            slow-release;
+            layers = <2>;
         };
     };
 
     keymap {
         compatible = "zmk,keymap";
 
-        default_layer {
+        Lower_Layer {
+            bindings = <
+&kp TAB   &none       &kp C_VOL_UP       &none       &none  &none    &kp HOME  &kp PAGE_DOWN  &kp PG_UP  &kp END    &none  &tog 4
+&kp CAPS  &kp C_PREV  &kp C_VOLUME_DOWN  &kp C_NEXT  &none  &none    &kp LEFT  &kp DOWN       &kp UP     &kp RIGHT  &none  &none
+&none     &none       &kp C_MUTE         &none       &none  &none    &none     &none          &none      &none      &none  &tog 5
+                                         &none       &none  &none    &none     &none          &none
+            >;
+        };
+
+        base {
             // -----------------------------------------------------------------------------------------
             // |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BKSP |
             // | CTRL |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   |
@@ -51,16 +67,16 @@
 &kp ESCAPE  &kp Q  &kp W  &kp E          &kp R  &kp T        &kp Y    &kp U  &kp I       &kp O    &kp P     &kp BACKSLASH
 &kp LCTRL   &kp A  &kp S  &kp D          &kp F  &kp G        &kp H    &kp J  &kp K       &kp L    &kp SEMI  &kp SQT
 &kp LSHFT   &kp Z  &kp X  &kp C          &kp V  &kp B        &kp N    &kp M  &kp COMMA   &kp DOT  &kp FSLH  &kp RIGHT_SHIFT
-                          &kp BACKSPACE  &mo 2  &kp SPACE    &kp RET  &mo 1  &kp DELETE
+                          &kp BACKSPACE  &mo 3  &kp SPACE    &kp RET  &mo 0  &kp DELETE
             >;
         };
 
-        Lower_Layer {
+        Gaming_Layer_Base {
             bindings = <
-&kp TAB   &trans      &kp C_VOL_UP       &trans      &trans  &trans    &kp HOME  &kp PAGE_DOWN  &kp PG_UP  &kp END    &trans  &tog 4
-&kp CAPS  &kp C_PREV  &kp C_VOLUME_DOWN  &kp C_NEXT  &trans  &trans    &kp LEFT  &kp DOWN       &kp UP     &kp RIGHT  &trans  &trans
-&trans    &trans      &kp C_MUTE         &trans      &trans  &trans    &trans    &trans         &trans     &trans     &trans  &tog 3
-                                         &trans      &trans  &trans    &trans    &trans         &trans
+&kp TAB           &kp Q  &kp W  &kp E         &kp R  &kp T        &none  &none  &none  &none  &none  &tog 4
+&kp LEFT_CONTROL  &kp A  &kp S  &kp D         &kp F  &kp G        &none  &none  &none  &none  &none  &none
+&kp LEFT_SHIFT    &kp Z  &kp X  &kp C         &kp V  &kp B        &none  &none  &none  &none  &none  &tog 5
+                                &kp LEFT_GUI  &mo 5  &kp SPACE    &none  &none  &none
             >;
         };
 
@@ -70,6 +86,15 @@
 &kp CAPS  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5        &kp N6             &kp N7        &kp N8        &kp N9        &kp N0        &trans
 &trans    &trans        &trans        &kp ENTER     &kp MINUS     &kp LEFT_BRACKET    &kp RIGHT_BRACKET  &kp PLUS      &kp TILDE     &trans        &kp GRAVE     &trans
                                       &trans        &trans        &trans              &trans             &trans        &trans
+            >;
+        };
+
+        Gaming_Layer_Upper {
+            bindings = <
+&kp ESCAPE  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&kp CAPS    &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans      &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+                            &trans  &trans  &trans    &trans  &trans  &trans
             >;
         };
 
@@ -83,26 +108,8 @@
             bindings = <
 &kp TAB    &trans  &kp F10  &kp F7  &kp F8  &kp F9    &kp KP_DIVIDE  &kp KP_NUMBER_7  &kp KP_N8   &kp KP_NUMBER_9  &kp KP_SUBTRACT  &tog 4
 &kp CAPS   &trans  &kp F11  &kp F4  &kp F5  &kp F6    &kp STAR       &kp KP_N4        &kp KP_N5   &kp KP_N6        &kp KP_PLUS      &trans
-&kp LSHFT  &trans  &kp F12  &kp F1  &kp F2  &kp F3    &trans         &kp KP_N1        &kp KP_N2   &kp KP_N3        &trans           &tog 3
+&kp LSHFT  &trans  &kp F12  &kp F1  &kp F2  &kp F3    &trans         &kp KP_N1        &kp KP_N2   &kp KP_N3        &trans           &tog 5
                             &trans  &trans  &trans    &trans         &kp KP_NUMBER_0  &kp PERIOD
-            >;
-        };
-
-        Gaming_Layer_Base {
-            bindings = <
-&kp TAB           &kp Q  &kp W  &kp E         &kp R  &kp T        &none  &none  &none  &none  &none  &tog 4
-&kp LEFT_CONTROL  &kp A  &kp S  &kp D         &kp F  &kp G        &none  &none  &none  &none  &none  &none
-&kp LEFT_SHIFT    &kp Z  &kp X  &kp C         &kp V  &kp B        &none  &none  &none  &none  &none  &tog 3
-                                &kp LEFT_GUI  &mo 5  &kp SPACE    &none  &none  &none
-            >;
-        };
-
-        Gaming_Layer_Upper {
-            bindings = <
-&kp ESCAPE  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&kp CAPS    &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans      &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                            &trans  &trans  &trans    &trans  &trans  &trans
             >;
         };
     };
