@@ -40,7 +40,7 @@
             bindings = <&kp LEFT_ALT>;
             key-positions = <14 13 15>;
             slow-release;
-            layers = <3>;
+            layers = <2>;
         };
     };
 
