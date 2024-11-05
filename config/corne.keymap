@@ -19,7 +19,7 @@
 
             #binding-cells = <2>;
             tapping-term-ms = <280>;
-            flavor = "balanced";
+            flavor = "hold-preferred";
             hold-trigger-key-positions = <38 39>;
         };
 
@@ -31,7 +31,7 @@
             #binding-cells = <2>;
             tapping-term-ms = <280>;
             hold-trigger-key-positions = <16 14 15 13 19 20 21 22>;
-            flavor = "balanced";
+            flavor = "hold-preferred";
         };
     };
 
@@ -46,10 +46,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&none  &kp Q            &kp W            &kp E         &kp R              &kp T                    &kp Y                  &kp U              &kp I         &kp O            &kp P               &none
-&none  &hrm LEFT_ALT A  &hrm LEFT_WIN S  &hrm LCTRL D  &hrm LEFT_SHIFT F  &kp G                    &kp H                  &hrm LEFT_SHIFT J  &hrm LCTRL K  &hrm LEFT_WIN L  &hrm LEFT_ALT SEMI  &none
-&none  &kp Z            &kp X            &kp C         &kp V              &kp B                    &kp N                  &kp M              &kp COMMA     &kp DOT          &kp FSLH            &none
-                                         &kp TAB       &kp ESCAPE         &key_or_layer 1 SPACE    &key_or_layer 2 ENTER  &kp BACKSPACE      &kp DELETE
+&none  &kp Q            &kp W            &kp E          &kp R              &kp T                    &kp Y                  &kp U              &kp I         &kp O            &kp P               &none
+&none  &hrm LEFT_ALT A  &hrm LEFT_WIN S  &hrm LCTRL D   &hrm LEFT_SHIFT F  &kp G                    &kp H                  &hrm LEFT_SHIFT J  &hrm LCTRL K  &hrm LEFT_WIN L  &hrm LEFT_ALT SEMI  &none
+&none  &kp Z            &kp X            &kp C          &kp V              &kp B                    &kp N                  &kp M              &kp COMMA     &kp DOT          &kp FSLH            &none
+                                         &kp BACKSPACE  &kp ESCAPE         &key_or_layer 1 SPACE    &key_or_layer 2 ENTER  &kp TAB            &kp DELETE
             >;
         };
 
