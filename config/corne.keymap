@@ -9,38 +9,29 @@
 #include <dt-bindings/zmk/keys.h>
 
 / {
-    combos {
-        compatible = "zmk,combos";
+    combos { compatible = "zmk,combos"; };
 
-        gui_left {
-            bindings = <&kp LEFT_GUI>;
-            key-positions = <16 15>;
-            layers = <0>;
+    behaviors {
+        key_or_layer: key_or_layer {
+            compatible = "zmk,behavior-hold-tap";
+            label = "KEY_OR_LAYER";
+            bindings = <&mo>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <280>;
+            flavor = "balanced";
+            hold-trigger-key-positions = <38 39>;
         };
 
-        gui_right {
-            bindings = <&kp RIGHT_GUI>;
-            key-positions = <19 20>;
-            layers = <0>;
-        };
+        hrm: hrm {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HRM";
+            bindings = <&kp>, <&kp>;
 
-        alt_left {
-            bindings = <&kp LEFT_ALT>;
-            key-positions = <16 15 14>;
-            layers = <0>;
-        };
-
-        alt_right {
-            bindings = <&kp RIGHT_ALT>;
-            key-positions = <19 20 21>;
-            layers = <0>;
-        };
-
-        gaming_alt {
-            bindings = <&kp LEFT_ALT>;
-            key-positions = <14 13 15>;
-            slow-release;
-            layers = <2>;
+            #binding-cells = <2>;
+            tapping-term-ms = <280>;
+            hold-trigger-key-positions = <16 14 15 13 19 20 21 22>;
+            flavor = "balanced";
         };
     };
 
@@ -55,61 +46,28 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp ESCAPE  &kp Q  &kp W  &kp E          &kp R  &kp T        &kp Y    &kp U  &kp I       &kp O    &kp P     &kp BACKSLASH
-&kp LCTRL   &kp A  &kp S  &kp D          &kp F  &kp G        &kp H    &kp J  &kp K       &kp L    &kp SEMI  &kp SQT
-&kp LSHFT   &kp Z  &kp X  &kp C          &kp V  &kp B        &kp N    &kp M  &kp COMMA   &kp DOT  &kp FSLH  &kp RIGHT_SHIFT
-                          &kp BACKSPACE  &mo 3  &kp SPACE    &kp RET  &mo 1  &kp DELETE
+&none  &kp Q            &kp W            &kp E         &kp R              &kp T                    &kp Y                  &kp U              &kp I         &kp O            &kp P               &none
+&none  &hrm LEFT_ALT A  &hrm LEFT_WIN S  &hrm LCTRL D  &hrm LEFT_SHIFT F  &kp G                    &kp H                  &hrm LEFT_SHIFT J  &hrm LCTRL K  &hrm LEFT_WIN L  &hrm LEFT_ALT SEMI  &kp SQT
+&none  &kp Z            &kp X            &kp C         &kp V              &kp B                    &kp N                  &kp M              &kp COMMA     &kp DOT          &kp FSLH            &none
+                                         &kp TAB       &kp ESCAPE         &key_or_layer 1 SPACE    &key_or_layer 2 ENTER  &kp BACKSPACE      &kp DELETE
             >;
         };
 
-        Lower_Layer {
+        num {
             bindings = <
-&kp TAB   &none       &kp C_VOL_UP       &none       &none  &none    &kp HOME  &kp PAGE_DOWN  &kp PG_UP  &kp END    &none  &tog 2
-&kp CAPS  &kp C_PREV  &kp C_VOLUME_DOWN  &kp C_NEXT  &none  &none    &kp LEFT  &kp DOWN       &kp UP     &kp RIGHT  &none  &none
-&trans    &none       &kp C_MUTE         &none       &none  &none    &none     &none          &none      &none      &none  &tog 5
-                                         &none       &none  &none    &none     &none          &none
+&none  &none         &none          &none         &none         &none               &bt BT_CLR         &bt BT_SEL 0      &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &none
+&none  &kp NUMBER_1  &kp NUMBER_2   &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5        &kp N6             &kp N7            &kp N8        &kp N9        &kp N0        &none
+&none  &none         &kp BACKSLASH  &kp ENTER     &kp MINUS     &kp LEFT_BRACKET    &kp RIGHT_BRACKET  &kp EQUAL         &kp TILDE     &trans        &kp GRAVE     &none
+                                    &trans        &trans        &trans              &trans             &kp SINGLE_QUOTE  &trans
             >;
         };
 
-        Gaming_Layer_Base {
+        nav {
             bindings = <
-&kp TAB           &kp Q  &kp W  &kp E         &kp R  &kp T        &none  &none  &none  &none  &none  &tog 2
-&kp LEFT_CONTROL  &kp A  &kp S  &kp D         &kp F  &kp G        &none  &none  &none  &none  &none  &none
-&kp LEFT_SHIFT    &kp Z  &kp X  &kp C         &kp V  &kp B        &none  &none  &none  &none  &none  &tog 5
-                                &kp LEFT_GUI  &mo 4  &kp SPACE    &none  &none  &none
-            >;
-        };
-
-        Upper_Layer {
-            bindings = <
-&kp TAB   &none         &none         &none         &none         &kp EQUAL           &bt BT_CLR         &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &none
-&kp CAPS  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5        &kp N6             &kp N7        &kp N8        &kp N9        &kp N0        &none
-&trans    &none         &none         &kp ENTER     &kp MINUS     &kp LEFT_BRACKET    &kp RIGHT_BRACKET  &kp PLUS      &kp TILDE     &trans        &kp GRAVE     &trans
-                                      &none         &none         &none               &trans             &none         &trans
-            >;
-        };
-
-        Gaming_Layer_Upper {
-            bindings = <
-&kp ESCAPE  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&kp CAPS    &kp N1  &kp N2  &kp N3  &kp N4  &kp N5    &kp N6  &kp N7  &kp N8  &kp N9  &kp N0  &trans
-&trans      &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                            &trans  &trans  &trans    &trans  &trans  &trans
-            >;
-        };
-
-        Function_Layer {
-            // -----------------------------------------------------------------------------------------
-            // |  TAB |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BKSP |
-            // | CTRL |     |     |     |     |     |   |  -  |  =  |  [  |  ]  |  \  |  `   |
-            // | SHFT |     |     |     |     |     |   |  _  |  +  |  {  |  }  | "|" |  ~   |
-            //                    | GUI |     | SPC |   | ENT |     | ALT |
-
-            bindings = <
-&kp TAB    &none  &kp F10  &kp F7  &kp F8  &kp F9    &kp KP_DIVIDE  &kp KP_NUMBER_7  &kp KP_N8   &kp KP_NUMBER_9  &kp KP_SUBTRACT  &tog 4
-&kp CAPS   &none  &kp F11  &kp F4  &kp F5  &kp F6    &kp STAR       &kp KP_N4        &kp KP_N5   &kp KP_N6        &kp KP_PLUS      &none
-&kp LSHFT  &none  &kp F12  &kp F1  &kp F2  &kp F3    &none          &kp KP_N1        &kp KP_N2   &kp KP_N3        &none            &tog 5
-                           &none   &none   &none     &none          &kp KP_NUMBER_0  &kp PERIOD
+&none  &none  &none  &none   &none   &none     &kp HOME  &kp PAGE_DOWN  &kp PG_UP  &kp END    &none  &none
+&none  &none  &none  &none   &none   &none     &kp LEFT  &kp DOWN       &kp UP     &kp RIGHT  &none  &none
+&none  &none  &none  &none   &none   &none     &none     &none          &none      &none      &none  &none
+                     &trans  &trans  &trans    &trans    &trans         &trans
             >;
         };
     };
