@@ -13,8 +13,8 @@ include:
 
   - board: nice_nano_v2
     shield: corne_left
-    cmake-args: -DZMK_USB=n -DCONFIG_ZMK_SPLIT_BLE=y -DCONFIG_ZMK_SPLIT=y -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=n
+    cmake-args: -DCONFIG_ZMK_SPLIT_BLE=y -DCONFIG_ZMK_SPLIT=y -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=n -DCONFIG_ZMK_SLEEP=y
 
   - board: nice_nano_v2
     shield: corne_right
-    cmake-args: -DZMK_USB=n -DCONFIG_ZMK_SPLIT_BLE=y -DCONFIG_ZMK_SPLIT=y -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=n
+    cmake-args: -DCONFIG_ZMK_SPLIT_BLE=y -DCONFIG_ZMK_SPLIT=y -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=n -DCONFIG_ZMK_SLEEP=y
