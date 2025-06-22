@@ -1,4 +1,3 @@
 build:
-  name: zmk-corne-dongle
   settings:
     board_root: .
