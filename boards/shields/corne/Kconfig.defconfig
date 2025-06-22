@@ -6,7 +6,10 @@ config ZMK_KEYBOARD_NAME
 config ZMK_SPLIT_ROLE_CENTRAL
     default y
 
-config ZMK_USB
+config CONFIG_ZMK_SLEEP
+    default n
+
+config CONFIG_ZMK_USB
     default y
 
 config ZMK_SPLIT
