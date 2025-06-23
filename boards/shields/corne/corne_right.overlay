@@ -1,0 +1,5 @@
+/ {
+    zmk,split-peripheral {
+        peripheral-id = <1>;
+    };
+};
