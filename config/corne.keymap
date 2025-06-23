@@ -66,19 +66,19 @@
 
         gaming_base {
             bindings = <
-&kp TAB         &kp Q            &kp W            &kp E         &kp R              &kp T        &kp Y                  &kp U              &kp I         &kp O            &kp P               &none
-&kp LEFT_SHIFT  &hrm LEFT_ALT A  &hrm LEFT_WIN S  &hrm LCTRL D  &hrm LEFT_SHIFT F  &kp G        &kp H                  &hrm LEFT_SHIFT J  &hrm LCTRL K  &hrm LEFT_WIN L  &hrm LEFT_ALT SEMI  &none
-&kp LCTRL       &kp Z            &kp X            &kp C         &kp V              &kp B        &kp N                  &kp M              &kp COMMA     &kp DOT          &kp FSLH            &none
-                                                  &kp LEFT_ALT  &mo 4              &kp SPACE    &key_or_layer 2 ENTER  &kp TAB            &kp DELETE
+&kp TAB         &kp Q  &kp W  &kp E         &kp R  &kp T        &none  &none  &none  &none  &none  &none
+&kp LEFT_SHIFT  &kp A  &kp S  &kp D         &kp F  &kp G        &none  &none  &none  &none  &none  &none
+&kp LCTRL       &kp Z  &kp X  &kp C         &kp V  &kp B        &none  &none  &none  &none  &none  &none
+                              &kp LEFT_ALT  &mo 4  &kp SPACE    &none  &none  &none
             >;
         };
 
         gaming_raised {
             bindings = <
-&kp ESC   &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&kp CAPS  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5    &kp N6  &kp N7  &kp N8  &kp N9  &kp N0  &trans
-&to 0     &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                          &trans  &trans  &trans    &trans  &trans  &trans
+&kp ESC   &trans        &trans  &trans  &trans  &trans    &trans        &trans  &trans  &trans  &trans  &trans
+&kp CAPS  &kp N1        &kp N2  &kp N3  &kp N4  &kp N5    &kp NUMBER_6  &kp N7  &kp N8  &kp N9  &kp N0  &trans
+&to 0     &kp NUMBER_6  &kp N7  &kp N8  &kp N9  &kp N0    &trans        &trans  &trans  &trans  &trans  &trans
+                                &trans  &trans  &trans    &trans        &trans  &trans
             >;
         };
     };
