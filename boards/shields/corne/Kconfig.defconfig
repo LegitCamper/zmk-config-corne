@@ -1,3 +1,10 @@
+if SHIELD_CORNE_DONGLE || SHILED_CORNE_LEFT || SHILED_CORNE_RIGHT 
+
+config ZMK_SPLIT
+    default y
+
+endif
+
 if SHIELD_CORNE_DONGLE
 
 config ZMK_KEYBOARD_NAME
@@ -9,9 +16,6 @@ config ZMK_SPLIT_ROLE_CENTRAL
 config ZMK_SLEEP
     default n
 
-config ZMK_SPLIT
-    default y
-
 config ZMK_SPLIT_BLE_CENTRAL_PERIPHERALS
     default 2
 
@@ -20,5 +24,24 @@ config BT_MAX_CONN
 
 config BT_MAX_PAIRED
     default 3
+
+config BT_CTLR_TX_PWR_PLUS_8
+    default y
+
+config ZMK_SPLIT_ROLE_CENTRAL
+    default y
+    
+endif
+
+if SHILED_CORNE_LEFT || SHILED_CORNE_RIGHT
+
+config ZMK_SPLIT_BLE
+    default y
+
+confg ZMK_SPLIT_ROLE_CENTRAL
+    default n
+
+config ZMK_SLEEP
+    default y
 
 endif
