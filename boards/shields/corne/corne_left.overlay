@@ -6,10 +6,10 @@
 
 #include "corne.dtsi"
 
-/ {
-    zmk,split-peripheral {
-        peripheral-id = <0>;
-    };
+&peripheral {
+    status = "okay";
+    zmk,split-role = "peripheral";
+    zmk,split-peripheral-id = <0>;
 };
 
 &kscan0 {

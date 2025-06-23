@@ -14,10 +14,10 @@
     col-offset = <6>;
 };
 
-/ {
-    zmk,split-peripheral {
-        peripheral-id = <1>;
-    };
+&peripheral {
+    status = "okay";
+    zmk,split-role = "peripheral";
+    zmk,split-peripheral-id = <1>;
 };
 
 &kscan0 {
