@@ -46,8 +46,8 @@
         base {
             bindings = <
 &none  &kp Q            &kp W            &kp E          &kp R              &kp T                    &kp Y                  &kp U              &kp I         &kp O            &kp P               &none
-&none  &hrm LEFT_ALT A  &hrm LEFT_WIN S  &hrm LCTRL D   &hrm LEFT_SHIFT F  &kp G                    &kp H                  &hrm LEFT_SHIFT J  &hrm LCTRL K  &hrm LEFT_WIN L  &hrm LEFT_ALT SEMI  &none
-&none  &kp Z            &kp X            &kp C          &kp V              &kp B                    &kp N                  &kp M              &kp COMMA     &kp DOT          &kp FSLH            &none
+&none  &hrm LEFT_ALT A  &hrm LEFT_WIN S  &hrm LCTRL D   &hrm LEFT_SHIFT F  &kp G                    &kp H                  &hrm LEFT_SHIFT J  &hrm LCTRL K  &hrm LEFT_WIN L  &hrm LEFT_ALT SEMI  &kp SINGLE_QUOTE
+&none  &kp Z            &kp X            &kp C          &kp V              &kp B                    &kp N                  &kp M              &kp COMMA     &kp DOT          &kp FSLH            &kp BACKSLASH
                                          &kp BACKSPACE  &kp ESCAPE         &key_or_layer 1 SPACE    &key_or_layer 2 ENTER  &kp TAB            &kp DELETE
             >;
         };
@@ -55,8 +55,8 @@
         num {
             bindings = <
 &none         &none         &none         &none         &kp UNDER     &kp LEFT_BRACKET    &kp RIGHT_BRACKET  &kp KP_EQUAL  &none      &none   &none      &none
-&kp CAPSLOCK  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5        &kp N6             &kp N7        &kp N8     &kp N9  &kp N0     &kp SINGLE_QUOTE
-&to 3         &none         &none         &kp ENTER     &kp MINUS     &kp LEFT_BRACE      &kp RIGHT_BRACE    &kp PLUS      &kp TILDE  &trans  &kp GRAVE  &kp BACKSLASH
+&kp CAPSLOCK  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5        &kp N6             &kp N7        &kp N8     &kp N9  &kp N0     &none
+&to 3         &none         &none         &kp ENTER     &kp MINUS     &kp LEFT_BRACE      &kp RIGHT_BRACE    &kp PLUS      &kp TILDE  &trans  &kp GRAVE  &none
                                           &trans        &trans        &trans              &trans             &trans        &trans
             >;
         };
