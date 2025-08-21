@@ -4,7 +4,7 @@ include:
     shield: settings_reset
 
   - board: seeeduino_xiao_ble
-    shield: corne_dongle
+    shield: corne_dongle prospector_adapter
     snippet: studio-rpc-usb-uart zmk-usb-logging
     cmake-args: DCONFIG_ZMK_STUDIO=y
 
