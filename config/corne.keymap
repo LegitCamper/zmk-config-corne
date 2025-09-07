@@ -42,7 +42,7 @@
 
     keymap {
         compatible = "zmk,keymap";
-
+            display-name = "Base";  
         base {
             bindings = <
 &none  &kp Q            &kp W            &kp E          &kp R              &kp T                    &kp Y                  &kp U              &kp I         &kp O            &kp P               &to 3
@@ -53,6 +53,7 @@
         };
 
         num {
+            display-name = "Num";  
             bindings = <
 &none         &none         &none         &kp GRAVE     &kp LEFT_BRACKET  &kp RIGHT_BRACKET    &kp LEFT_BRACE  &kp RIGHT_BRACE  &kp TILDE  &none   &none   &none
 &kp CAPSLOCK  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4      &kp NUMBER_5         &kp N6          &kp N7           &kp N8     &kp N9  &kp N0  &trans
@@ -62,6 +63,7 @@
         };
 
         nav {
+            display-name = "Nav";  
             bindings = <
 &none  &none  &none  &none   &none   &none     &kp HOME  &kp PAGE_DOWN  &kp PG_UP  &kp END    &none  &none
 &none  &none  &none  &none   &none   &none     &kp LEFT  &kp DOWN       &kp UP     &kp RIGHT  &none  &none
@@ -71,6 +73,7 @@
         };
 
         gaming_base {
+            display-name = "Gaming";  
             bindings = <
 &kp TAB         &kp Q  &kp W  &kp E         &kp R  &kp T        &kp Y      &kp U  &kp I      &kp O    &kp P  &to 0
 &kp LCTRL       &kp A  &kp S  &kp D         &kp F  &kp G        &kp H      &kp J  &kp K      &kp L    &none  &none
@@ -80,6 +83,7 @@
         };
 
         gaming_raised {
+            display-name = "Gaming Raised";  
             bindings = <
 &kp ESC   &trans        &trans  &trans  &trans  &trans    &trans        &trans  &trans  &trans  &trans  &trans
 &kp CAPS  &kp N1        &kp N2  &kp N3  &kp N4  &kp N5    &kp NUMBER_6  &kp N7  &kp N8  &kp N9  &kp N0  &trans
